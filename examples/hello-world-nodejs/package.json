@@ -1,0 +1,14 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Says hello to standard output",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.15.0"
+  }
+}
