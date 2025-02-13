@@ -1,0 +1,20 @@
+{
+  "name": "santas-web-api",
+  "version": "1.0.0",
+  "description": "A web service for managing the logistics of Christmas presents.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "eslint .",
+    "monkeybars": "node monkeybars/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.16.0",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
