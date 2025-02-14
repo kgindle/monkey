@@ -49,23 +49,10 @@ class Context:
         self.project.observe(paths)
     
     def _hear(self, paths: list[str], prompt: str = None):
-        prompt = self._read_prompt()
-        vdb = self.project.get_vdb()
-        output = vdb.as_retriever().invoke(prompt)
-        print(output)
+        chat = self.project.create_chat(paths)
+
+        while chat.is_active():
+            chat.tick()
     
-    def _read_prompt(self) -> str:
-        lines = []
-
-        while True:
-            line = input("> ")
-            
-            if line.strip() == "":
-                break
-
-            lines.append(line)
-
-        return "\n".join(lines)
-
     def _do(self, paths: list[str]):
         pass
